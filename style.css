@@ -1,0 +1,7 @@
+#MICBrkptL, #MICBrkptU, #FlipS, #miclogS, #minWidth1, #maxWidth1, #VM11, #M11, #m11, #VM21, #M21, #m21,
+#VMOneBrkpt, #MOneBrkpt, #FlipERB1, #miclogE1, #minWidth2, #maxWidth2, #VM12, #M12, #m12, #VM22, #M22, #m22,
+#VMOneBrkpt2, #MOneBrkpt2, #D1ERB, #D2ERB, #VM13, #M13, #m13, #VM23, #M23, #m23, #VMOneBrkpt3, #MOneBrkpt3,
+#FlipERB3, #miclogE3 #minWidthM1 #maxWidthM1 #FlipMod1 #miclogM1 #minWidthM2 #maxWidthM2 #FlipMod2 #miclogM2
+#FlipMod3 #miclogM3 #D1Set1 #D2Set1 #D1Set2 #D2Set2{ 
+    max-width: 60%); 
+}
