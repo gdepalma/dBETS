@@ -28,18 +28,6 @@ source('R/Spline/plotSpline.r')
 source('R/Spline/splineFunctions.R')
 
 
-
-# theme_old <- theme_update(axis.text.y=element_text(size=15, color='black'),
-#                           axis.text.x=element_text(size=14, color='black'),
-#                           axis.title.x=element_text(size=17, margin=margin(t=5)),
-#                           axis.title.y=element_text(size=17, margin=margin(r=5),angle=90),
-#                           panel.background=element_rect(color='black', fill='grey96'),
-#                           panel.grid.minor=element_blank(),
-#                           plot.title = element_text(size = 17, margin=margin(b=5)),
-#                           legend.position='bottom',
-#                           legend.key=element_rect(fill="white",colour="white"),
-#                           legend.text = element_text(size = 16),
-#                           legend.title=element_text(size=15))
 theme_set(theme_fivethirtyeight(base_size=14))
 theme_update(axis.line = element_line(colour = "black"),
         panel.grid.major = element_line(color='gray90'),
