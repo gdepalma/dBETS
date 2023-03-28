@@ -28,11 +28,13 @@ source('R/Spline/plotSpline.r')
 source('R/Spline/splineFunctions.R')
 
 
+
+
 theme_set(theme_fivethirtyeight(base_size=14))
 theme_update(axis.line = element_line(colour = "black"),
         panel.grid.major = element_line(color='gray90'),
         panel.grid.minor = element_blank(),
-        axis.text=element_text(size=14),
+        axis.text=element_text(size=12),
         axis.title=element_text(size=15),
         plot.title=element_text(size=15),
         legend.position='bottom',

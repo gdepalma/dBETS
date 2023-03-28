@@ -15,7 +15,7 @@ runLogisticOne=function(MIC,DIA,xcens,ycens,MICBrkpt,session){
   options(warn=-1)
   bc <- tryCatch(lm(logit(yobs/icoefs1[1])~xtrue1),
                  error=function(e){'e'})
-  if(bc!='e'){
+  if(class(bc)=='lm'){
     icoefs1[2] <- -bc$coeff[1]/bc$coeff[2]
     icoefs1[3] <- -bc$coeff[2]
     icoefs1[4] <- -bc$coeff[2]

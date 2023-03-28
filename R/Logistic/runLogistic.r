@@ -17,7 +17,8 @@ runLogistic=function(MIC,DIA,xcens,ycens,MICBrkptL,MICBrkptU,minWidth,maxWidth,s
   options(warn=-1)
   bc <- tryCatch(lm(logit(yobs/icoefs1[1])~xtrue1),
                  error=function(e){'e'})
-  if(bc!='e'){
+  
+  if(class(bc)=='lm'){
     icoefs1[2] <- -bc$coeff[1]/bc$coeff[2]
     icoefs1[3] <- -bc$coeff[2]
     icoefs1[4] <- -bc$coeff[2]
@@ -25,6 +26,7 @@ runLogistic=function(MIC,DIA,xcens,ycens,MICBrkptL,MICBrkptU,minWidth,maxWidth,s
     icoefs1[2:4]=c(1.5,.2,.4)
   }
   options(warn=1)
+  
   ytrue1=getylogtrue1(icoefs1,xtrue1)
 
   
@@ -41,9 +43,11 @@ runLogistic=function(MIC,DIA,xcens,ycens,MICBrkptL,MICBrkptU,minWidth,maxWidth,s
 #   sigmaM=rep(NA,numIter)
 #   sigmaD=rep(NA,numIter)
   
+  
+  
 #   progressInit()
   withProgress(message = 'Running Model...', min=1, max=numIter, {
-
+    
     for(iter in 1:numIter){
           
       if(iter%%1000==0) setProgress(value = iter)
