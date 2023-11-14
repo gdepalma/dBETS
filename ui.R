@@ -22,9 +22,9 @@ fluidPage(theme=shinythemes::shinytheme("cosmo"),
         ),
       conditionalPanel(condition = "input.dataSource == true",            
                        fileInput(inputId = "file", label="")),
-      selectInput(inputId="convertToLog", label="Are MIC values on log2 scale?",choices=list('Yes'=1,'No'=0),selected=1),
+      selectInput(inputId="convertToLog", label="Are the input MIC values on a log2 scale?",choices=list('Yes'=1,'No'=0),selected=1),
       conditionalPanel(condition = "input.oneBrkpt == false",
-                       p('MIC Breakpoints (log2 scale)'),
+                       p('Specify the MIC breakpoints on the log2 scale'),
                        fluidRow(
                          column(6,selectInput("MICBrkptL", "Lower (<=)", choices =seq(-8,8,by=1),selected=-1)),
                          column(6,selectInput("MICBrkptU", "Upper (>=)", choices =seq(-8,8,by=1),selected=1))
