@@ -5,7 +5,7 @@ account: dbets
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 11450
-bundleId: 7923654
+bundleId: 7923741
 url: https://dbets.shinyapps.io/dBETS/
 asMultiple: FALSE
 asStatic: FALSE
